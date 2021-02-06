@@ -4,16 +4,16 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import ListPage from 'pages/List/List';
-import CardPage from 'pages/Card/Card';
+import CarsListPage from 'pages/CarsList/CarsList';
+import CarCardPage from 'pages/CarCard/CarCard';
 import routes from './routes';
 
 const AppRouter = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path={routes.list} component={ListPage} />
-        <Route exact path={routes.card} component={CardPage} />
+        <Route exact path={routes.list} component={CarsListPage} />
+        <Route exact path={routes.card} component={CarCardPage} />
         {/* 404 */}
         <Route component={() => <>Page not found</>} />
       </Switch>
