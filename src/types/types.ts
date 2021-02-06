@@ -26,4 +26,8 @@ export type IManufacturers = {
   manufacturers: Array<IManufacturer>
 }
 
+export type IChildren = {
+  children: JSX.Element;
+}
+
 export {}

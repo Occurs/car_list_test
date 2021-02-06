@@ -1,11 +1,8 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
+import { IChildren } from 'types/types';
 
-interface ILayouts {
-  children: JSX.Element;
-}
-
-const Layout = ({ children }: ILayouts) => {
+const Layout = ({ children }: IChildren) => {
   return (
   <Container
     maxWidth="sm"

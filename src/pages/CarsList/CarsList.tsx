@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { getCars } from 'client/http'
+import { FiltersContext } from 'context/filtersDictionary/FiltersProvider';
 import { ICar } from 'types/types';
 
 const CarsListPage = () => {
+  const { colors, manufacturers } = useContext(FiltersContext);
   const [cars, setCars] = useState<Array<ICar>>([]);
  
   useEffect(() => {
@@ -12,7 +14,7 @@ const CarsListPage = () => {
     };
     fetchData();
   }, []);
-
+  console.log('AZAZAZAZA', colors, manufacturers)
   return (
     <div>
       {cars.length > 0 &&
