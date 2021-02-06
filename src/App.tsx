@@ -1,13 +1,16 @@
 import React from 'react';
+import { ThemeProvider } from '@material-ui/core/styles'
 import AppRouter from 'router/AppRouter';
 import { FiltersProvider } from 'context/filtersDictionary/FiltersProvider';
-import './App.css';
+import { theme } from 'styles/theme';
 
 function App() {
   return (
-    <FiltersProvider>
-      <AppRouter />
-    </FiltersProvider>
+    <ThemeProvider theme={theme}>
+      <FiltersProvider>
+        <AppRouter />
+      </FiltersProvider>
+    </ThemeProvider>
   );
 }
 

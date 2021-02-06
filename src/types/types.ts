@@ -27,7 +27,7 @@ export type IManufacturers = {
 }
 
 export type IChildren = {
-  children: JSX.Element;
+  children: JSX.Element | Array<JSX.Element>;
 }
 
 export {}

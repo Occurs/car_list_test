@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 import { getCar } from 'client/http'
 import { ICar } from 'types/types';
 
@@ -19,9 +21,11 @@ const CarCardPage = () => {
     fetchData();
   }, [stockNumber]);
   return (
-    <div>
-      Card {car?.stockNumber}
-    </div>
+    <Typography component='div'>
+      <Box fontWeight='fontWeightRegular' m={1}>
+        Car {car?.stockNumber}
+      </Box>
+    </Typography>
   );
 };
 
