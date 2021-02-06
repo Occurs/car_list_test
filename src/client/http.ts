@@ -1,38 +1,28 @@
-import axios, {AxiosInstance, AxiosResponse, Method, CancelToken, ResponseType} from 'axios';
+import axios from 'axios';
+import { ICars, IColors, IManufacturers } from 'types/types';
 
 const baseUrl = 'https://auto1-mock-server.herokuapp.com/'
+const apiVersion = 'api/'
+const requestUrl = baseUrl + apiVersion
 
-interface ICar {
-  stockNumber: number,
-  manufacturerName: string,
-  modelName: string,
-  color: string,
-  mileage: {
-    number: number,
-    unit: string
-  },
-  fuelType: string,
-  pictureUrl: string
-}
-
-interface IList {
-  cars: Array<ICar>,
-  totalCarsCount: number,
-  totalPageCount: number
-}
-
-// export function getList(): Promise<AxiosResponse<IList>> {
-//   return axios.get(baseUrl + 'api/cars')
-//     .then((res) => {
-//       return res.data.cars;
-//     }).catch(() => {
-//       console.log('ERROR on getList')
-//     });
-// }
-
-export const getList = () => { 
-  return axios.get<IList>(baseUrl + 'api/cars')
+export const getList = (manufacturer = '', color = '', sort = 'asc', page = 0) => { 
+  return axios.get<ICars>(requestUrl + 'cars')
   .then((res) => {
     return res.data.cars;
   })
 }
+
+export const getColors = () => { 
+  return axios.get<IColors>(requestUrl + 'colors')
+  .then((res) => {
+    return res.data.colors;
+  })
+}
+
+export const getManufacturers = () => { 
+  return axios.get<IManufacturers>(requestUrl + 'manufacturers')
+  .then((res) => {
+    return res.data.manufacturers;
+  })
+}
+
