@@ -5,22 +5,32 @@ const baseUrl = 'https://auto1-mock-server.herokuapp.com/'
 const apiVersion = 'api/'
 const requestUrl = baseUrl + apiVersion
 
-export const getCars = (manufacturer = '', color = '', sort = 'asc', page = 0) => { 
-  return axios.get<ICars>(requestUrl + 'cars')
-  .then((res) => {
+const instance = axios.create({
+  baseURL: requestUrl,
+});
+
+export const getCars = (manufacturer = '', color = '', sort = 'asc', page = 1) => { 
+  return instance.get<ICars>('cars', { 
+    params: {
+      manufacturer,
+      color,
+      sort,
+      page,
+    }
+  }).then((res) => {
     return res.data.cars;
   })
 }
 
 export const getCar = (stockNumber: number) => { 
-  return axios.get<{ car: ICar }>(requestUrl + `cars/${stockNumber}`)
+  return instance.get<{ car: ICar }>(`cars/${stockNumber}`)
   .then((res) => {
     return res.data.car;
   })
 }
 
 export const getColors = () => { 
-  return axios.get<IColors>(requestUrl + 'colors')
+  return instance.get<IColors>('colors')
   .then((res) => {
     return res.data.colors;
   })
