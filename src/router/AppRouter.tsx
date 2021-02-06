@@ -22,7 +22,7 @@ const AppRouter = () => {
     <Router>
       <Switch>
         <Route exact path={routes.carsList} component={(props: any) => LayoutWrapper(CarsListPage, props)} />
-        <Route exact path={routes.carCard} component={CarCardPage} />
+        <Route exact path={routes.carCard} component={(props: any) => LayoutWrapper(CarCardPage, props)} />
         {/* 404 */}
         <Route component={() => <>Page not found</>} />
       </Switch>
