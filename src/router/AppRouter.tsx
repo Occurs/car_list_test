@@ -12,8 +12,8 @@ const AppRouter = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path={routes.list} component={CarsListPage} />
-        <Route exact path={routes.card} component={CarCardPage} />
+        <Route exact path={routes.carsList} component={CarsListPage} />
+        <Route exact path={routes.carCard} component={CarCardPage} />
         {/* 404 */}
         <Route component={() => <>Page not found</>} />
       </Switch>

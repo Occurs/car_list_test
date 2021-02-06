@@ -1,6 +1,6 @@
 const routes = {
-  list: '/',
-  card: '/:id',
+  carsList: '/',
+  carCard: '/:stockNumber',
 };
 
 export default routes;
