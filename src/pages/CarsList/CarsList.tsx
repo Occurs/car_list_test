@@ -26,9 +26,14 @@ const CarsListPage = () => {
     async function fetchData() {
       setIsLoading(true);
       try {
-        const { cars, totalPageCount } = await getCars(filters.manufacturer, filters.color, "asc", filters.page);
+        const { cars, totalPageCount } = await getCars(
+          filters.manufacturer,
+          filters.color,
+          "asc",
+          filters.page
+        );
         setCars(cars);
-        setTotalPageCount(totalPageCount)
+        setTotalPageCount(totalPageCount);
       } finally {
         setIsLoading(false);
       }
@@ -54,6 +59,7 @@ const CarsListPage = () => {
   }
 
   function onApplyFilters() {
+    setPage(1);
     searchTrigger(!flag);
   }
 

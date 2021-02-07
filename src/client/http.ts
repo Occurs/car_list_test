@@ -9,8 +9,8 @@ const instance = axios.create({
   baseURL: requestUrl,
 });
 
-export const getCars = (manufacturer = '', color = '', sort = 'asc', page = 1) => { 
-  return instance.get<ICars>('cars', { 
+export const getCars = (manufacturer = '', color = '', sort = 'asc', page = 1) => {
+  return instance.get<ICars>('cars', {
     params: {
       manufacturer,
       color,
@@ -22,24 +22,24 @@ export const getCars = (manufacturer = '', color = '', sort = 'asc', page = 1) =
   })
 }
 
-export const getCar = (stockNumber: number) => { 
+export const getCar = (stockNumber: number) => {
   return instance.get<{ car: ICar }>(`cars/${stockNumber}`)
-  .then((res) => {
-    return res.data.car;
-  })
+    .then((res) => {
+      return res.data.car;
+    })
 }
 
-export const getColors = () => { 
+export const getColors = () => {
   return instance.get<IColors>('colors')
-  .then((res) => {
-    return res.data.colors;
-  })
+    .then((res) => {
+      return res.data.colors;
+    })
 }
 
-export const getManufacturers = () => { 
+export const getManufacturers = () => {
   return axios.get<IManufacturers>(requestUrl + 'manufacturers')
-  .then((res) => {
-    return res.data.manufacturers;
-  })
+    .then((res) => {
+      return res.data.manufacturers;
+    })
 }
 

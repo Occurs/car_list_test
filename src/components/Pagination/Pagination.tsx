@@ -44,7 +44,7 @@ const Pagination = ({
         Previous
       </Button>
       <Typography>
-        <Box margin="0 12px" fontSize="12px" width="100%">
+        <Box component="span" margin="0 12px" fontSize="12px" width="100%">
           {`Page ${page} of ${totalPageCount}`}
         </Box>
       </Typography>

@@ -37,4 +37,4 @@ export type ICarFilters = {
   [key: string]: string | number;
 }
 
-export {}
+export { }

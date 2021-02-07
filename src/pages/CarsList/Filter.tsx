@@ -87,7 +87,7 @@ const Filter = ({
           displayEmpty
         >
           <MenuItem key="none" value="">
-            None
+            All car colors
           </MenuItem>
           {colors.map((color) => (
             <MenuItem key={color} value={color}>
@@ -119,7 +119,7 @@ const Filter = ({
           displayEmpty
         >
           <MenuItem key="none" value="">
-            None
+            All manufacturers
           </MenuItem>
           {manufacturers.map((manufacturer) => (
             <MenuItem key={manufacturer.name} value={manufacturer.name}>

@@ -75,7 +75,7 @@ const CarCardPage = () => {
                     fontWeight="bold"
                     margin="12px 0"
                   >
-                    {`${car.modelName} ${car.manufacturerName}`}
+                    {`${car.manufacturerName} ${car.modelName}`}
                   </Box>
                 </Typography>
                 <Typography>
