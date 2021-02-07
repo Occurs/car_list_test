@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink, generatePath } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import EmptyListItem from './EmptyListItem';
-import routes from 'router/routes';
+import ListItem from './ListItem';
 import { getCars } from 'client/http'
 import { ICar } from 'types/types';
 import { colors } from 'styles/variables';
@@ -21,7 +20,7 @@ const CarsListPage = () => {
     };
     fetchData();
   }, []);
-  console.log('AZAZA', emptyList)
+ 
   return (
     <Grid
       container
@@ -38,15 +37,11 @@ const CarsListPage = () => {
           <Typography>
             <Box component='span' fontSize='18px'>Showing 10 of 100 results</Box>
           </Typography>
-          { emptyList.map((item) => <EmptyListItem key={item} />)}
+          {cars.length ?
+            cars.map((car: ICar) => <ListItem key={car.stockNumber} car={car}/>)
+            : emptyList.map((item) => <EmptyListItem key={item} />)
+          }
         </Box>
-        {/* {cars.length > 0 &&
-          cars.map((car: ICar) => (
-            <NavLink  key={car.stockNumber} to={generatePath(routes.carCard, { stockNumber: car.stockNumber })}>
-              {car.stockNumber}
-            </NavLink>
-            ))
-        } */}
       </Grid>
     </Grid>
   );
