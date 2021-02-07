@@ -12,6 +12,9 @@ export const theme = createMuiTheme({
     },
   },
   typography: {
+    button: {
+      textTransform: 'none'
+    },
     allVariants: {
       color: colors.font,
     },
