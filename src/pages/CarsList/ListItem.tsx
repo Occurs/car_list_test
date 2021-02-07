@@ -24,7 +24,7 @@ const ListItem = ({ car }: IListItemProps) => {
   const classes = useStyles();
   const colorCapitalized = color.charAt(0).toUpperCase() + color.slice(1);
   return (
-    <Box display='flex' border={`1px solid ${colors.secondary}`} padding='12px' height='90px' marginTop='12px' width='100%'>
+    <Box display='flex' border={`2px solid ${colors.secondary}`} padding='12px' height='90px' marginTop='12px' width='100%'>
       <Box component='div' bgcolor={colors.secondary} marginRight='12px' height='100%' width='85px'>
         <img alt={`${stockNumber}`} src={pictureUrl} className={classes.image} />
       </Box>

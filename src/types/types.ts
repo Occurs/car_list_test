@@ -30,4 +30,10 @@ export type IChildren = {
   children: JSX.Element | Array<JSX.Element>;
 }
 
+export type ICarFilters = {
+  color: string,
+  manufacturer: string,
+  [key: string]: string;
+}
+
 export {}
