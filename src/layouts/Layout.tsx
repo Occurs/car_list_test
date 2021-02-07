@@ -17,7 +17,7 @@ const Layout = ({ children }: IChildren) => {
   return (
     <>
     <Header />
-    <Box component='div' className={classes.root}>
+    <Box component='div' className={classes.root} padding='24px 0'>
       <Container maxWidth='md'>
         { children }
       </Container>
