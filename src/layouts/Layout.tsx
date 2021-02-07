@@ -7,9 +7,12 @@ import Footer from "components/Footer/Footer";
 import { IChildren } from "types/types";
 
 const useStyles = makeStyles({
-  root: {
+  wrapper: {
     minHeight: "calc(100vh - 160px)",
   },
+  container: {
+    minHeight: "calc(100vh - 208px)",
+  }
 });
 
 const Layout = ({ children }: IChildren) => {
@@ -17,8 +20,8 @@ const Layout = ({ children }: IChildren) => {
   return (
     <>
       <Header />
-      <Box component="div" className={classes.root} padding="24px 0">
-        <Container maxWidth="md">{children}</Container>
+      <Box component="div" className={classes.wrapper} padding="24px 0">
+        <Container className={classes.container} maxWidth="md">{children}</Container>
       </Box>
       <Footer />
     </>

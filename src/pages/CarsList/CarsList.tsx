@@ -79,7 +79,7 @@ const CarsListPage = () => {
         />
       </Grid>
       <Grid item xs={8}>
-        <Box component="div" paddingLeft="24px">
+        <Box component="div" paddingLeft="24px" >
           <Typography>
             <Box component="span" fontSize="18px" fontWeight="bold">
               Available cars

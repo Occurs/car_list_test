@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import CarsListPage from "pages/CarsList/CarsList";
 import CarCardPage from "pages/CarCard/CarCard";
+import Page404 from "pages/Page404/Page404";
 import Layout from "layouts/Layout";
 import routes from "./routes";
 
@@ -27,8 +28,7 @@ const AppRouter = () => {
           path={routes.carCard}
           component={(props: any) => LayoutWrapper(CarCardPage, props)}
         />
-        {/* 404 */}
-        <Route component={() => <>Page not found</>} />
+        <Route component={(props: any) => LayoutWrapper(Page404, props)} />
       </Switch>
     </Router>
   );
