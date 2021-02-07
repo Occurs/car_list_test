@@ -1,12 +1,10 @@
 import React, { useContext } from 'react';
 import Box from '@material-ui/core/Box';
-import InputLabel from '@material-ui/core/InputLabel';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
 import { FiltersContext } from 'context/filtersDictionary/FiltersProvider';
 import { colors as colorPallette } from 'styles/variables';
@@ -23,19 +21,23 @@ type IFilterComponent = {
 
 const useStyles = makeStyles(() => ({
   formControl: {
-    // minWidth: '100%',
-    // height: '25px'
+    marginBottom: '24px',
   },
+  button: {
+    marginLeft: 'auto',
+    marginRight: '0px',
+    display: 'block',
+    color: '#FFFFFF !important'
+  }
 }));
 
 const MenuProps = {
   PaperProps: {
     style: {
-      border: `solid 2px ${colorPallette.secondary}`,
       borderTop: 'none',
       borderRdius: '2px',
       width: 'inherit',
-      marginTop: '50px'
+      marginTop: '47px'
     },
   },
 };
@@ -57,7 +59,11 @@ const Filter = ({ applyFilters, onFiltersHandle, color, manufacturer }: IFilterC
           }}
           MenuProps={MenuProps}
           variant='outlined'
+          displayEmpty
         >
+          <MenuItem key='none' value=''>
+            None
+          </MenuItem>
           {colors.map(color => (
             <MenuItem key={color} value={color}>
               {color}
@@ -67,7 +73,6 @@ const Filter = ({ applyFilters, onFiltersHandle, color, manufacturer }: IFilterC
       </FormControl>
       <Typography>Manufacturer</Typography>
       <FormControl className={classes.formControl} variant='outlined' size='small' fullWidth>
-        <InputLabel htmlFor="manufacturer-select">Manufacturer</InputLabel>
         <Select
           value={manufacturer}
           onChange={onFiltersHandle}
@@ -77,7 +82,11 @@ const Filter = ({ applyFilters, onFiltersHandle, color, manufacturer }: IFilterC
           }}
           MenuProps={MenuProps}
           variant='outlined'
+          displayEmpty
         >
+          <MenuItem key='none' value=''>
+            None
+          </MenuItem>
           {manufacturers.map(manufacturer => (
             <MenuItem key={manufacturer.name} value={manufacturer.name}>
               {manufacturer.name}
@@ -85,7 +94,7 @@ const Filter = ({ applyFilters, onFiltersHandle, color, manufacturer }: IFilterC
           ))}
         </Select>
       </FormControl>
-      <Button variant="contained" color="primary" onClick={applyFilters}>
+      <Button variant="contained" color="primary" onClick={applyFilters} className={classes.button}>
         Filter
       </Button>
     </Box>
