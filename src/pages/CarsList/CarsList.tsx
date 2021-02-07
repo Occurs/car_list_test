@@ -16,23 +16,25 @@ const CarsListPage = () => {
   const [filters, setFilters] = useState<ICarFilters>({
     color: "",
     manufacturer: "",
+    page: 1,
   });
-  const [flag, searchTrigger] = useState<Boolean>(false);
-  const [isLoading, setIsLoading] = useState<Boolean>(false);
+  const [flag, searchTrigger] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [totalPageCount, setTotalPageCount] = useState<number>(0);
 
   useEffect(() => {
     async function fetchData() {
       setIsLoading(true);
-      let cars = [];
       try {
-        cars = await getCars(filters.manufacturer, filters.color, "asc", 1);
+        const { cars, totalPageCount } = await getCars(filters.manufacturer, filters.color, "asc", filters.page);
+        setCars(cars);
+        setTotalPageCount(totalPageCount)
       } finally {
         setIsLoading(false);
       }
-      setCars(cars);
     }
     fetchData();
-  }, [flag]);
+  }, [flag, filters.page]);
 
   function onFiltersHandle(
     event: React.ChangeEvent<{ name?: string | undefined; value: unknown }>
@@ -43,6 +45,12 @@ const CarsListPage = () => {
       updatedFilter[name] = value;
       setFilters(updatedFilter);
     }
+  }
+
+  function setPage(page: number) {
+    const updatedFilter = { ...filters };
+    updatedFilter.page = page;
+    setFilters(updatedFilter);
   }
 
   function onApplyFilters() {
@@ -81,7 +89,12 @@ const CarsListPage = () => {
             : cars.map((car: ICar) => (
                 <ListItem key={car.stockNumber} car={car} />
               ))}
-          <Pagination />
+          <Pagination
+            totalPageCount={totalPageCount}
+            page={filters.page}
+            setPage={setPage}
+            isLoading={isLoading}
+          />
         </Box>
       </Grid>
     </Grid>

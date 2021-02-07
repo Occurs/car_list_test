@@ -33,7 +33,8 @@ export type IChildren = {
 export type ICarFilters = {
   color: string,
   manufacturer: string,
-  [key: string]: string;
+  page: number,
+  [key: string]: string | number;
 }
 
 export {}

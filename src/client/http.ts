@@ -18,7 +18,7 @@ export const getCars = (manufacturer = '', color = '', sort = 'asc', page = 1) =
       page,
     }
   }).then((res) => {
-    return res.data.cars;
+    return res.data;
   })
 }
 
