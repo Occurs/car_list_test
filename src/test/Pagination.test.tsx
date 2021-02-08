@@ -1,9 +1,9 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import {render, fireEvent, within} from '@testing-library/react';
-import Pagination from 'components/Pagination/Pagination';
+import React from "react";
+import renderer from "react-test-renderer";
+import { render, fireEvent } from "@testing-library/react";
+import Pagination from "components/Pagination/Pagination";
 
-describe('Paginator Component', () => {
+describe("Paginator Component", () => {
   const props = {
     totalPageCount: 100,
     page: 5,
@@ -11,59 +11,59 @@ describe('Paginator Component', () => {
     setPage: jest.fn(),
   };
 
-  test('snapshot', () => {
+  test("snapshot", () => {
     const component = renderer.create(<Pagination {...props} />);
 
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  test('render', () => {
-    const {getByText} = render(<Pagination {...props} />);
-    getByText('Page 5 of 100');
+  test("render", () => {
+    const { getByText } = render(<Pagination {...props} />);
+    getByText("Page 5 of 100");
   });
 
-  test('render with small itemsLength', () => {
+  test("render with small itemsLength", () => {
     const propsForCurrentTest = {
       ...props,
       totalPageCount: 8,
     };
-    const {getByText} = render(<Pagination {...propsForCurrentTest} />);
-    getByText('Page 5 of 8');
+    const { getByText } = render(<Pagination {...propsForCurrentTest} />);
+    getByText("Page 5 of 8");
   });
 
-  test('render last page', async () => {
-    const {getByText} = render(<Pagination {...props} page={7} />);
-    getByText('Page 7 of 100');
+  test("render last page", async () => {
+    const { getByText } = render(<Pagination {...props} page={7} />);
+    getByText("Page 7 of 100");
   });
 
-  test('click on previous page button', () => {
-    const {getByText} = render(<Pagination {...props} />);
-    const previous = getByText('Previous');
+  test("click on previous page button", () => {
+    const { getByText } = render(<Pagination {...props} />);
+    const previous = getByText("Previous");
     fireEvent.click(previous);
     expect(props.setPage).toHaveBeenCalledTimes(1);
     expect(props.setPage).toHaveBeenCalledWith(4);
   });
 
-  test('click on next page button', () => {
-    const {getByText} = render(<Pagination {...props} />);
-    const next = getByText('Next');
+  test("click on next page button", () => {
+    const { getByText } = render(<Pagination {...props} />);
+    const next = getByText("Next");
     fireEvent.click(next);
     expect(props.setPage).toHaveBeenCalledTimes(1);
     expect(props.setPage).toHaveBeenCalledWith(6);
   });
 
-  test('click on first page button', () => {
-    const {getByText} = render(<Pagination {...props} />);
-    const first = getByText('First');
+  test("click on first page button", () => {
+    const { getByText } = render(<Pagination {...props} />);
+    const first = getByText("First");
     fireEvent.click(first);
     expect(props.setPage).toHaveBeenCalledTimes(1);
     expect(props.setPage).toHaveBeenCalledWith(1);
   });
 
-  test('click on last page button', () => {
-    const {getByText} = render(<Pagination {...props} />);
-    const last = getByText('Last');
+  test("click on last page button", () => {
+    const { getByText } = render(<Pagination {...props} />);
+    const last = getByText("Last");
     fireEvent.click(last);
     expect(props.setPage).toHaveBeenCalledTimes(1);
     expect(props.setPage).toHaveBeenCalledWith(100);

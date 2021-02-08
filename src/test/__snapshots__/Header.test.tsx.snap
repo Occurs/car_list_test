@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component snapshot 1`] = `
+<header
+  className="MuiBox-root MuiBox-root-1"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthMd"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          className="MuiBox-root MuiBox-root-2"
+        >
+          <p
+            className="MuiTypography-root MuiTypography-body1"
+          >
+            Logo
+          </p>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1"
+        >
+          <span
+            className="MuiBox-root MuiBox-root-3"
+          >
+            <a
+              aria-current="page"
+              className="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorPrimary active"
+              href="/"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              style={Object {}}
+            >
+              <span
+                className="MuiBox-root MuiBox-root-4"
+              >
+                Purchase
+              </span>
+            </a>
+            <a
+              aria-current={null}
+              className="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorPrimary"
+              href="/favorites"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+            >
+              <span
+                className="MuiBox-root MuiBox-root-5"
+              >
+                My Orders
+              </span>
+            </a>
+            <a
+              aria-current={null}
+              className="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorPrimary"
+              href="/sell"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+            >
+              <span
+                className="MuiBox-root MuiBox-root-6"
+              >
+                Sell
+              </span>
+            </a>
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+`;
