@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page404 Component snapshot 1`] = `
+<div
+  className="MuiGrid-root makeStyles-container-1 MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+>
+  <div
+    className="MuiGrid-root MuiGrid-item"
+  >
+    <p
+      className="MuiTypography-root MuiTypography-body1"
+    >
+      <span
+        className="MuiBox-root MuiBox-root-2"
+      >
+        404 - Not Found
+      </span>
+    </p>
+  </div>
+  <div
+    className="MuiGrid-root MuiGrid-item"
+  >
+    <p
+      className="MuiTypography-root MuiTypography-body1"
+    >
+      <span
+        className="MuiBox-root MuiBox-root-3"
+      >
+        Sorry, the page you are looking for does not exist.
+      </span>
+    </p>
+  </div>
+  <div
+    className="MuiGrid-root MuiGrid-item"
+  >
+    <p
+      className="MuiTypography-root MuiTypography-body1"
+    >
+      <span
+        className="MuiBox-root MuiBox-root-4"
+      >
+        You can always go back to the 
+        <a
+          aria-current={null}
+          className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+          href="/"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+        >
+          <span
+            className="MuiBox-root MuiBox-root-5"
+          >
+            homepage
+          </span>
+        </a>
+        .
+      </span>
+    </p>
+  </div>
+</div>
+`;
