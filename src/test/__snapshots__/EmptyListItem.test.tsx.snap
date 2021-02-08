@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Component snapshot 1`] = `
+<div
+  className="MuiBox-root MuiBox-root-1"
+>
+  <div
+    className="MuiBox-root MuiBox-root-2"
+  />
+  <div
+    className="MuiBox-root MuiBox-root-3"
+  >
+    <div
+      className="MuiBox-root MuiBox-root-4"
+    />
+    <div
+      className="MuiBox-root MuiBox-root-5"
+    />
+    <div
+      className="MuiBox-root MuiBox-root-6"
+    />
+  </div>
+</div>
+`;
