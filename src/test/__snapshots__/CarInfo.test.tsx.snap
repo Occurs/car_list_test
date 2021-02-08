@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CarCard Component snapshot 1`] = `
+Array [
+  <img
+    alt="41400"
+    className="makeStyles-image-1"
+    src=""
+  />,
+  <div
+    className="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-space-between"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8"
+    >
+      <div
+        className="MuiBox-root MuiBox-root-3"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1"
+        >
+          <span
+            className="MuiBox-root MuiBox-root-4"
+          >
+            Fiat Marea
+          </span>
+        </p>
+        <p
+          className="MuiTypography-root MuiTypography-body1"
+        >
+          <span
+            className="MuiBox-root MuiBox-root-5"
+          >
+            Stock # 41400 - 100141 KM - Diesel - White
+          </span>
+        </p>
+        <p
+          className="MuiTypography-root MuiTypography-body1"
+        >
+          <span
+            className="MuiBox-root MuiBox-root-6"
+          >
+            This car is currently available and can be delivered as soon as tomorrow morning. Please be aware that delivery times shown in this page are not definitive and may change due to bad weather conditions.
+          </span>
+        </p>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+    >
+      <div
+        className="MuiBox-root MuiBox-root-7"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1"
+        >
+          <span
+            className="MuiBox-root MuiBox-root-8"
+          >
+            If you like this car, click the button and save it in your collection of favourite items.
+          </span>
+        </p>
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-2 MuiButton-containedPrimary"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            Save
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>,
+]
+`;
