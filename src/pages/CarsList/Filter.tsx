@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
@@ -8,20 +8,10 @@ import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
 import { FiltersContext } from "context/filtersDictionary/FiltersProvider";
 import { colors as colorPallette } from "styles/variables";
+import { ICarFilterSimple } from "types/types";
 
 type IFilterComponent = {
-  applyFilters: () => void;
-  onFiltersHandle:
-    | ((
-        event: React.ChangeEvent<{
-          name?: string | undefined;
-          value: unknown;
-        }>,
-        child: React.ReactNode
-      ) => void)
-    | undefined;
-  color: string;
-  manufacturer: string;
+  applyFilters: (filters: ICarFilterSimple) => void;
 };
 
 const useStyles = makeStyles(() => ({
@@ -48,14 +38,28 @@ const MenuProps = {
   },
 };
 
-const Filter = ({
-  applyFilters,
-  onFiltersHandle,
-  color,
-  manufacturer,
-}: IFilterComponent) => {
+const Filter = ({ applyFilters }: IFilterComponent) => {
   const classes = useStyles();
   const { colors, manufacturers } = useContext(FiltersContext);
+  const [filters, setFilters] = useState<ICarFilterSimple>({
+    color: "",
+    manufacturer: "",
+  });
+
+  function onFiltersHandle(
+    event: React.ChangeEvent<{ name?: string | undefined; value: unknown }>
+  ) {
+    const { value, name } = event.target;
+    if (typeof value === "string" && name !== undefined) {
+      const updatedFilter = { ...filters };
+      updatedFilter[name] = value;
+      setFilters(updatedFilter);
+    }
+  }
+
+  function onApplyHandle() {
+    applyFilters(filters);
+  }
 
   return (
     <Box
@@ -76,7 +80,7 @@ const Filter = ({
         fullWidth
       >
         <Select
-          value={color}
+          value={filters.color}
           onChange={onFiltersHandle}
           inputProps={{
             name: "color",
@@ -108,7 +112,7 @@ const Filter = ({
         fullWidth
       >
         <Select
-          value={manufacturer}
+          value={filters.manufacturer}
           onChange={onFiltersHandle}
           inputProps={{
             name: "manufacturer",
@@ -131,7 +135,7 @@ const Filter = ({
       <Button
         variant="contained"
         color="primary"
-        onClick={applyFilters}
+        onClick={onApplyHandle}
         className={classes.button}
       >
         Filter

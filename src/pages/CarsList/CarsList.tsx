@@ -18,7 +18,6 @@ const CarsListPage = () => {
     manufacturer: "",
     page: 1,
   });
-  const [flag, searchTrigger] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [totalPageCount, setTotalPageCount] = useState<number>(0);
 
@@ -39,18 +38,7 @@ const CarsListPage = () => {
       }
     }
     fetchData();
-  }, [flag, filters.page]);
-
-  function onFiltersHandle(
-    event: React.ChangeEvent<{ name?: string | undefined; value: unknown }>
-  ) {
-    const { value, name } = event.target;
-    if (typeof value === "string" && name !== undefined) {
-      const updatedFilter = { ...filters };
-      updatedFilter[name] = value;
-      setFilters(updatedFilter);
-    }
-  }
+  }, [filters.color, filters.page, filters.manufacturer]);
 
   function setPage(page: number) {
     const updatedFilter = { ...filters };
@@ -58,9 +46,11 @@ const CarsListPage = () => {
     setFilters(updatedFilter);
   }
 
-  function onApplyFilters() {
-    setPage(1);
-    searchTrigger(!flag);
+  function onApplyFilters({
+    color,
+    manufacturer,
+  }: Pick<ICarFilters, "color" | "manufacturer">) {
+    setFilters({ color, manufacturer, page: 1 });
   }
 
   return (
@@ -73,13 +63,10 @@ const CarsListPage = () => {
       <Grid item xs={4}>
         <Filter
           applyFilters={onApplyFilters}
-          onFiltersHandle={onFiltersHandle}
-          color={filters.color}
-          manufacturer={filters.manufacturer}
         />
       </Grid>
       <Grid item xs={8}>
-        <Box component="div" paddingLeft="24px" >
+        <Box component="div" paddingLeft="24px">
           <Typography>
             <Box component="span" fontSize="18px" fontWeight="bold">
               Available cars

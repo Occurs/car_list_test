@@ -30,11 +30,14 @@ export type IChildren = {
   children: JSX.Element | Array<JSX.Element>;
 }
 
-export type ICarFilters = {
+export type ICarFilterSimple = {
   color: string,
   manufacturer: string,
-  page: number,
   [key: string]: string | number;
+}
+
+export type ICarFilters = ICarFilterSimple & {
+  page: number,
 }
 
 export { }

@@ -8,7 +8,7 @@ const EmptyListItem = () => {
       display="flex"
       border={`2px solid ${colors.secondary}`}
       padding="12px"
-      height="90px"
+      height="95px"
       marginTop="12px"
       width="100%"
     >

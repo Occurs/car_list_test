@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Filter Component snapshot 1`] = `
+<div
+  className="MuiBox-root MuiBox-root-3"
+>
+  <p
+    className="MuiTypography-root MuiTypography-body1"
+  >
+    <span
+      className="MuiBox-root MuiBox-root-4"
+    >
+      Color
+    </span>
+  </p>
+  <div
+    className="MuiFormControl-root makeStyles-formControl-1 MuiFormControl-fullWidth"
+  >
+    <div
+      className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+      onClick={[Function]}
+    >
+      <div
+        aria-haspopup="listbox"
+        aria-labelledby="mui-component-select-color"
+        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+        id="mui-component-select-color"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        All car colors
+      </div>
+      <input
+        aria-hidden={true}
+        className="MuiSelect-nativeInput"
+        id="color-select"
+        name="color"
+        onAnimationStart={[Function]}
+        onChange={[Function]}
+        required={false}
+        tabIndex={-1}
+        value=""
+      />
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+      <fieldset
+        aria-hidden={true}
+        className="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+        style={
+          Object {
+            "paddingLeft": 8,
+          }
+        }
+      >
+        <legend
+          className="PrivateNotchedOutline-legend-6"
+          style={
+            Object {
+              "width": 0.01,
+            }
+          }
+        >
+          <span
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "&#8203;",
+              }
+            }
+          />
+        </legend>
+      </fieldset>
+    </div>
+  </div>
+  <p
+    className="MuiTypography-root MuiTypography-body1"
+  >
+    <span
+      className="MuiBox-root MuiBox-root-9"
+    >
+      Manufacturer
+    </span>
+  </p>
+  <div
+    className="MuiFormControl-root makeStyles-formControl-1 MuiFormControl-fullWidth"
+  >
+    <div
+      className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+      onClick={[Function]}
+    >
+      <div
+        aria-haspopup="listbox"
+        aria-labelledby="mui-component-select-manufacturer"
+        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+        id="mui-component-select-manufacturer"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        All manufacturers
+      </div>
+      <input
+        aria-hidden={true}
+        className="MuiSelect-nativeInput"
+        id="manufacturer-select"
+        name="manufacturer"
+        onAnimationStart={[Function]}
+        onChange={[Function]}
+        required={false}
+        tabIndex={-1}
+        value=""
+      />
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+      <fieldset
+        aria-hidden={true}
+        className="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+        style={
+          Object {
+            "paddingLeft": 8,
+          }
+        }
+      >
+        <legend
+          className="PrivateNotchedOutline-legend-6"
+          style={
+            Object {
+              "width": 0.01,
+            }
+          }
+        >
+          <span
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "&#8203;",
+              }
+            }
+          />
+        </legend>
+      </fieldset>
+    </div>
+  </div>
+  <button
+    className="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-2 MuiButton-containedPrimary"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiButton-label"
+    >
+      Filter
+    </span>
+  </button>
+</div>
+`;
