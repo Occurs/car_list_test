@@ -12,6 +12,11 @@ const useStyles = makeStyles({
   container: {
     minHeight: "inherit",
   },
+  image: {
+    width: "inherit",
+    height: "inherit",
+    objectFit: "contain",
+  },
 });
 
 const Page404 = () => {
@@ -24,6 +29,15 @@ const Page404 = () => {
       justify="center"
       alignItems="center"
     >
+      <Grid item>
+        <Box component="div" height="60px" width="180px">
+          <img
+            alt="logo"
+            src="https://auto1-js-task-api--mufasa71.repl.co/images/logo.png"
+            className={classes.image}
+          />
+        </Box>
+      </Grid>
       <Grid item>
         <Typography>
           <Box component="span" fontSize="32px" fontWeight="bold">

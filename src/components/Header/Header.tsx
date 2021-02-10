@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
 import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
@@ -8,7 +9,16 @@ import Container from "@material-ui/core/Container";
 import routes from "router/routes";
 import { colors } from "styles/variables";
 
+const useStyles = makeStyles({
+  image: {
+    width: "inherit",
+    height: "inherit",
+    objectFit: "contain",
+  },
+});
+
 const Header = () => {
+  const classes = useStyles();
   return (
     <Box
       component="header"
@@ -23,9 +33,15 @@ const Header = () => {
           alignItems="center"
         >
           <Grid item>
-            <Box component="div">
-              <Typography>Logo</Typography>
-            </Box>
+            <Link underline="none" component={NavLink} to={routes.carsList}>
+              <Box component="div" height="60px" width="180px">
+                <img
+                  alt="logo"
+                  src="https://auto1-js-task-api--mufasa71.repl.co/images/logo.png"
+                  className={classes.image}
+                />
+              </Box>
+            </Link>
           </Grid>
           <Grid item>
             <Typography>
