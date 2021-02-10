@@ -4,7 +4,7 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Pagination from "components/Pagination/Pagination";
 import EmptyListItem from "./EmptyListItem";
-import ListItem from "./ListItem";
+import ListItem from "../../components/ListItem/ListItem";
 import Filter from "./Filter";
 import { getCars } from "client/http";
 import { ICar, ICarFilters } from "types/types";
@@ -61,9 +61,7 @@ const CarsListPage = () => {
       alignItems="stretch"
     >
       <Grid item xs={4}>
-        <Filter
-          applyFilters={onApplyFilters}
-        />
+        <Filter applyFilters={onApplyFilters} />
       </Grid>
       <Grid item xs={8}>
         <Box component="div" paddingLeft="24px">

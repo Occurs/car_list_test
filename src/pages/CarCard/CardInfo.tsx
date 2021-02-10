@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
@@ -9,8 +9,8 @@ import { capitalize } from "utils/capitalize";
 import { colors as colorPallette } from "styles/variables";
 
 type ICardInfo = {
-  car: ICar,
-}
+  car: ICar;
+};
 
 const useStyles = makeStyles({
   image: {
@@ -30,6 +30,45 @@ const useStyles = makeStyles({
 
 const CarCardPage = ({ car }: ICardInfo) => {
   const classes = useStyles();
+  const [favoriteCars, setFavoriteCars] = useState<Array<ICar>>([]);
+
+  useEffect(() => {
+    const favoriteCarsList = localStorage.getItem("favoriteCarsList");
+    if (favoriteCarsList !== null) {
+      const parsedList = JSON.parse(favoriteCarsList);
+      setFavoriteCars(parsedList);
+    }
+  }, [car.stockNumber]);
+
+  function addToLocalStorage() {
+    const updatedFavoriteCars = [...favoriteCars, car];
+    setFavoriteCars(updatedFavoriteCars);
+    localStorage.setItem(
+      "favoriteCarsList",
+      JSON.stringify(updatedFavoriteCars)
+    );
+  }
+
+  function removeFromLocalStorage() {
+    const favCars = [...favoriteCars];
+    const index = favCars.findIndex(
+      (favoriteCar) => favoriteCar.stockNumber === car.stockNumber
+    );
+    if (index > -1) {
+      favCars.splice(index, 1);
+      setFavoriteCars(favCars);
+      localStorage.setItem("favoriteCarsList", JSON.stringify(favCars));
+    }
+  }
+
+  function checkInFavorites() {
+    return (
+      favoriteCars.filter(
+        (favoriteCar) => favoriteCar.stockNumber === car.stockNumber
+      ).length > 0
+    );
+  }
+
   return (
     <>
       <img
@@ -98,14 +137,25 @@ const CarCardPage = ({ car }: ICardInfo) => {
                 collection of favourite items.
               </Box>
             </Typography>
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={() => {}}
-              className={classes.button}
-            >
-              Save
-            </Button>
+            {checkInFavorites() ? (
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={removeFromLocalStorage}
+                className={classes.button}
+              >
+                Remove
+              </Button>
+            ) : (
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={addToLocalStorage}
+                className={classes.button}
+              >
+                Save
+              </Button>
+            )}
           </Box>
         </Grid>
       </Grid>

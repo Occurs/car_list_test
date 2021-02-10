@@ -48,7 +48,7 @@ const Header = () => {
                   to={routes.favorites}
                 >
                   <Box color={colors.font} component="span" marginLeft="24px">
-                    My Orders
+                    Favorites
                   </Box>
                 </Link>
                 <Link underline="none" component={NavLink} to="/sell">
