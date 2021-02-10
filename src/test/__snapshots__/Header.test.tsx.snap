@@ -58,7 +58,7 @@ exports[`Header Component snapshot 1`] = `
               <span
                 className="MuiBox-root MuiBox-root-5"
               >
-                My Orders
+                Favorites
               </span>
             </a>
             <a
