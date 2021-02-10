@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# Example project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SPA on CRA with Material UI components
+
+## Tech stack and main dependencies
+
+- [Yarn](https://yarnpkg.com/)
+- [React](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Material UI](https://material-ui.com/)
+- [Testing Library](https://testing-library.com/)
 
 ## Available Scripts
 
@@ -8,39 +16,46 @@ In the project directory, you can run:
 
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Runs the app in the development mode on [http://localhost:3000](http://localhost:3000).
 
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[More information](https://facebook.github.io/create-react-app/docs/running-tests)
 
 ### `yarn build`
 
 Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[more information](https://facebook.github.io/create-react-app/docs/deployment)
 
 ### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Note: this is a one-way operation. Once you `eject`, you can’t go back! I hope you don't need it.**
+## Enviroment
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+No environment variables yet ))
+## Project structure (section ./src)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+| Name       | Content                                | More info                                                                        |
+| ---------- | -------------------------------------- | -------------------------------------------------------------------------------- |
+| client     | All http interactions                  | [axios](https://github.com/axios/axios)                                          |
+| components | 'Stupid' react components              | -                                                                                |
+| context    | React context providers                | [React context](https://reactjs.org/docs/context.html#gatsby-focus-wrapper)      |
+| layouts    | Project layouts                        | -                                                                                |
+| pages      | Project pages                          | -                                                                                |
+| router     | React router and routers list          | [React router](https://reactrouter.com/web/guides/quick-start)                   |
+| styles     | Material UI theme and style variables  | [Material UI Theme](https://material-ui.com/customization/theming/)              |
+| test       | Snapshot and integration test          | [Testing Library](https://testing-library.com/docs/react-testing-library/intro/) |
+| types      | Typescript types                       | -                                                                                |
+| utils      | Helpful functions                      | -                                                                                |
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Project routes
 
-## Learn More
+Project routes represented in ./src/router/routes.ts
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Useful links
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started)
+- [React documentation](https://reactjs.org/)
+- [Testing Library documentation](https://testing-library.com/)
+- [Material UI documentation](https://material-ui.com/)

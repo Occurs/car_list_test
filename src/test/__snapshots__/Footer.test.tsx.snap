@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Component snapshot 1`] = `
+<footer
+  className="MuiBox-root MuiBox-root-1"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthMd"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1"
+        >
+          <span
+            className="MuiBox-root MuiBox-root-2"
+          >
+            © AUTO1 Group 2018
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+`;

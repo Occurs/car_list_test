@@ -1,6 +1,7 @@
 const routes = {
-  list: '/',
-  card: '/:id',
+  carsList: '/',
+  carCard: '/car/:stockNumber',
+  favorites: '/favorites'
 };
 
 export default routes;

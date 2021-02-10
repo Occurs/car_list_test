@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Car ListItem Component snapshot 1`] = `
+<div
+  className="MuiBox-root MuiBox-root-2"
+>
+  <div
+    className="MuiBox-root MuiBox-root-3"
+  >
+    <img
+      alt="41400"
+      className="makeStyles-image-1"
+      src=""
+    />
+  </div>
+  <div
+    className="MuiBox-root MuiBox-root-4"
+  >
+    <p
+      className="MuiTypography-root MuiTypography-body1"
+    >
+      <span
+        className="MuiBox-root MuiBox-root-5"
+      >
+        Fiat Marea
+      </span>
+    </p>
+    <p
+      className="MuiTypography-root MuiTypography-body1"
+    >
+      <span
+        className="MuiBox-root MuiBox-root-6"
+      >
+        Stock # 41400 - 100141 KM - Diesel - White
+      </span>
+    </p>
+    <a
+      aria-current={null}
+      className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+      href="/car/41400"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+    >
+      <span
+        className="MuiBox-root MuiBox-root-7"
+      >
+        View details
+      </span>
+    </a>
+  </div>
+</div>
+`;
