@@ -7,11 +7,24 @@ exports[`Page404 Component snapshot 1`] = `
   <div
     className="MuiGrid-root MuiGrid-item"
   >
+    <div
+      className="MuiBox-root MuiBox-root-3"
+    >
+      <img
+        alt="logo"
+        className="makeStyles-image-2"
+        src="https://auto1-js-task-api--mufasa71.repl.co/images/logo.png"
+      />
+    </div>
+  </div>
+  <div
+    className="MuiGrid-root MuiGrid-item"
+  >
     <p
       className="MuiTypography-root MuiTypography-body1"
     >
       <span
-        className="MuiBox-root MuiBox-root-2"
+        className="MuiBox-root MuiBox-root-4"
       >
         404 - Not Found
       </span>
@@ -24,7 +37,7 @@ exports[`Page404 Component snapshot 1`] = `
       className="MuiTypography-root MuiTypography-body1"
     >
       <span
-        className="MuiBox-root MuiBox-root-3"
+        className="MuiBox-root MuiBox-root-5"
       >
         Sorry, the page you are looking for does not exist.
       </span>
@@ -37,7 +50,7 @@ exports[`Page404 Component snapshot 1`] = `
       className="MuiTypography-root MuiTypography-body1"
     >
       <span
-        className="MuiBox-root MuiBox-root-4"
+        className="MuiBox-root MuiBox-root-6"
       >
         You can always go back to the 
         <a
@@ -49,7 +62,7 @@ exports[`Page404 Component snapshot 1`] = `
           onFocus={[Function]}
         >
           <span
-            className="MuiBox-root MuiBox-root-5"
+            className="MuiBox-root MuiBox-root-7"
           >
             homepage
           </span>
