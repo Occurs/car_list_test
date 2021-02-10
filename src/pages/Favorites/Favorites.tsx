@@ -26,7 +26,7 @@ const FavoritieCarsPage = () => {
         ? favoriteCars.map((car: ICar) => (
             <ListItem key={car.stockNumber} car={car} />
           ))
-        : "You have no favorites"}
+        : "You have no favorite cars"}
     </Box>
   );
 };

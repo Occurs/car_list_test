@@ -6,12 +6,15 @@ import Header from "components/Header/Header";
 import Footer from "components/Footer/Footer";
 import { IChildren } from "types/types";
 
+const headerAndFooterHeight = 80 + 80;
+const paddingsHeight = 24 + 24;
+
 const useStyles = makeStyles({
   wrapper: {
-    minHeight: "calc(100vh - 160px)",
+    minHeight: `calc(100vh - ${headerAndFooterHeight}px)`,
   },
   container: {
-    minHeight: "calc(100vh - 208px)",
+    minHeight: `calc(100vh - ${headerAndFooterHeight + paddingsHeight}px)`,
   }
 });
 

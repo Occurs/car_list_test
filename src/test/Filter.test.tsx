@@ -2,7 +2,7 @@ import React from "react";
 import renderer from "react-test-renderer";
 import { render, fireEvent, getByTestId } from "@testing-library/react";
 import Filter from "pages/CarsList/Filter";
-import { FiltersContext } from "context/filtersDictionary/FiltersProvider";
+import { FiltersContext } from "context/FiltersProvider";
 
 describe("Filter Component", () => {
   const props = {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getCar } from "client/http";
-import CardInfo from "./CardInfo"
+import CardInfo from "./CardInfo";
 import { ICar } from "types/types";
 
 type ParamTypes = {
@@ -13,17 +13,13 @@ const CarCardPage = () => {
   const [car, setCar] = useState<ICar | null>(null);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const carInfo = await getCar(Number(paramStockNumber));
+    async function fetchCarData(paramStockNum: string) {
+      const carInfo = await getCar(Number(paramStockNum));
       setCar(carInfo);
-    };
-    fetchData();
+    }
+    fetchCarData(paramStockNumber);
   }, [paramStockNumber]);
-  return (
-    <>
-      {car !== null && <CardInfo car={car} />}
-    </>
-  );
+  return <>{car !== null && <CardInfo car={car} />}</>;
 };
 
 export default CarCardPage;

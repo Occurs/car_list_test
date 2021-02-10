@@ -61,7 +61,7 @@ const CarCardPage = ({ car }: ICardInfo) => {
     }
   }
 
-  function checkInFavorites() {
+  function checkInFavorite() {
     return (
       favoriteCars.filter(
         (favoriteCar) => favoriteCar.stockNumber === car.stockNumber
@@ -137,7 +137,7 @@ const CarCardPage = ({ car }: ICardInfo) => {
                 collection of favourite items.
               </Box>
             </Typography>
-            {checkInFavorites() ? (
+            {checkInFavorite() ? (
               <Button
                 variant="contained"
                 color="primary"

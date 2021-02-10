@@ -6,7 +6,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
-import { FiltersContext } from "context/filtersDictionary/FiltersProvider";
+import { FiltersContext } from "context/FiltersProvider";
 import { colors as colorPallette } from "styles/variables";
 import { ICarFilterSimple } from "types/types";
 

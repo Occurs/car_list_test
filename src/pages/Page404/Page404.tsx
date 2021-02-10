@@ -52,7 +52,6 @@ const Page404 = () => {
         </Typography>
       </Grid>
     </Grid>
-    // </Box>
   );
 };
 

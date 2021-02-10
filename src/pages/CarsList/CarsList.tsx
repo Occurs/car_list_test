@@ -22,7 +22,7 @@ const CarsListPage = () => {
   const [totalPageCount, setTotalPageCount] = useState<number>(0);
 
   useEffect(() => {
-    async function fetchData() {
+    async function fetchCarsListData() {
       setIsLoading(true);
       try {
         const { cars, totalPageCount } = await getCars(
@@ -37,7 +37,7 @@ const CarsListPage = () => {
         setIsLoading(false);
       }
     }
-    fetchData();
+    fetchCarsListData();
   }, [filters.color, filters.page, filters.manufacturer]);
 
   function setPage(page: number) {
